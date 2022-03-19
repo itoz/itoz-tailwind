@@ -2,15 +2,33 @@
 
 ## Getting started
 
+
+## .npmrc
 ```
-$ npm i @itoz/itoz-tailwind
+WIP
 ```
 
-``` tailwind.config.js
+```
+$ npm i @itoz/itoz-tailwind@<version>
+```
+
+## tailwind.config.js
+```
+
 module.exports = {
+  content: ["/dist/**/*.{html,js}"],
   ...
+
   plugins: [
     require('@itoz/itoz-tailwind/plugin')
   ]
 }
+```
+
+
+## Build
+
+```
+$ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
 ```

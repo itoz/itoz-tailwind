@@ -108,14 +108,14 @@ const buttons = {
     boxShadow: "0 0px 4px 4px rgba(0, 0, 0, 0)",
     transition: "box-shadow 0.15s ease",
   },
-  ".btn.btn-primary": {
+  ".btn-primary": {
     background: "linear-gradient(135deg, #427eff 0%, #f13f79 70%)",
   },
-  ".btn.btn-middle": {
+  ".btn-middle": {
     fontSize: "1.4rem",
     padding: "1.2rem",
   },
-  ".btn.btn-small": {
+  ".btn-small": {
     fontSize: "1.2rem",
     padding: "1rem",
   },
