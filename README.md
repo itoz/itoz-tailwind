@@ -3,9 +3,9 @@
 ## Getting started
 
 
-## .npmrc
+## create .npmrc
 ```
-WIP
+//npm.pkg.github.com/:_authToken=<token>
 ```
 
 ```
@@ -31,4 +31,9 @@ module.exports = {
 ```
 $ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
+```
+
+## Delivery
+```
+npm publish
 ```
