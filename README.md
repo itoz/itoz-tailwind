@@ -1,6 +1,6 @@
 # itoz-tailwind
 
-
+https://itoz.github.io/itoz-tailwind/
 
 ## create .npmrc
 ```
