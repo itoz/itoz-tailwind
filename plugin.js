@@ -125,6 +125,57 @@ const buttons = {
   },
 };
 
+const spinners = {
+  ".spinner": {
+    position: "relative",
+    width: "120px",
+    height: "120px",
+  },
+  ".spinner-inner": {
+    boxSizing: "border-box",
+    position: "relative",
+    display: "inline-block",
+    margin: "0",
+    width: "100%",
+    height: "100%",
+    border: "2px solid ",
+    borderRadius: "50%",
+    borderColor: "transparent",
+  },
+  ".spinner-inner::before": {
+    boxSizing: "border-box",
+    left: "-2px",
+    top: "-2px",
+    position: "absolute",
+    content: "''",
+    width: "inherit",
+    height: "inherit",
+    border: "inherit",
+    borderRadius: "inherit",
+    display: "inline-block",
+    borderColor: "transparent",
+    borderLeftColor: "#427eff",
+    borderTopColor: "#427eff",
+    borderRightColor: "#427eff",
+    animation: "spinner 1s infinite  linear",
+  },
+  ".spinner-inner::after": {
+    boxSizing: "border-box",
+    left: "-2px",
+    top: "-2px",
+    position: "absolute",
+    content: "''",
+    width: "inherit",
+    height: "inherit",
+    border: "inherit",
+    borderRadius: "inherit",
+    display: "inline-block",
+    borderColor: "transparent",
+    borderRightColor: "#f13f79",
+    borderTopColor: "#f13f79",
+    animation: "spinner 1.5s infinite linear",
+  },
+};
 const lightColors = {
   ".text-light": {
     color: itozColors.gray[600],
@@ -248,6 +299,7 @@ const darkColors = {
 
 module.exports = plugin(
   function ({ addBase, addComponents, addUtilities, theme }) {
+    console.log(theme("keyframes"));
     addBase({
       html: {
         fontSize: "62.5%",
@@ -273,7 +325,7 @@ module.exports = plugin(
       },
     });
     addUtilities([defaultColors, darkColors, lightColors]);
-    addComponents([buttons, labels]);
+    addComponents([spinners, buttons, labels]);
   },
   {
     // darkMode: "class", // or 'media' or 'class',
@@ -356,6 +408,12 @@ module.exports = plugin(
             "sans-serif",
           ],
           number: ["Roboto", "sans-serif"],
+        },
+        keyframes: {
+          spinning: {
+            "0%": { transform: "rotate(0deg)" },
+            "100%": { transform: "rotate(360deg)" },
+          },
         },
         // borderRadius: {
         //   DEFAULT: "4px",

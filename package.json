@@ -1,7 +1,7 @@
 {
   "name": "@itoz/itoz-tailwind",
   "version": "0.1.5",
-  "author":"itoz",
+  "author": "itoz",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -10,13 +10,16 @@
     "url": "git://github.com/itoz/itoz-tailwind.git"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./docs/itoz-tailwind.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./docs/itoz-tailwind.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./docs/itoz-tailwind.css --minify"
   },
   "dependencies": {
     "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12"
+    "postcss": "^8.4.12",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6"
   }
 }

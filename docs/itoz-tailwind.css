@@ -1,6 +1,6 @@
-/*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
-*/
+/* @import "./components/spinner.css"; */
+
+/* ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -492,6 +492,61 @@ h3 {
   --tw-backdrop-sepia:  ;
 }
 
+.spinner {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.spinner-inner {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid ;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.spinner-inner::before {
+  box-sizing: border-box;
+  left: -2px;
+  top: -2px;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+  display: inline-block;
+  border-color: transparent;
+  border-left-color: #427eff;
+  border-top-color: #427eff;
+  border-right-color: #427eff;
+  -webkit-animation: spinner 1s infinite  linear;
+          animation: spinner 1s infinite  linear;
+}
+
+.spinner-inner::after {
+  box-sizing: border-box;
+  left: -2px;
+  top: -2px;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+  display: inline-block;
+  border-color: transparent;
+  border-right-color: #f13f79;
+  border-top-color: #f13f79;
+  -webkit-animation: spinner 1.5s infinite linear;
+          animation: spinner 1.5s infinite linear;
+}
+
 .btn {
   display: inline-block;
   padding: 1.6rem;
@@ -510,6 +565,16 @@ h3 {
 
 .btn-primary {
   background: linear-gradient(135deg, #427eff 0%, #f13f79 70%);
+}
+
+.btn-md {
+  font-size: 1.4rem;
+  padding: 1.2rem;
+}
+
+.btn-sm {
+  font-size: 1.2rem;
+  padding: 1rem;
 }
 
 .btn:hover {
@@ -782,4 +847,18 @@ h3 {
 
 .border-yellow-light {
   border: solid 1px #FCE6B6;
+}
+
+/* TODO: ここに定義するべきではない */
+
+@-webkit-keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
