@@ -128,8 +128,18 @@ const buttons = {
 const spinners = {
   ".spinner": {
     position: "relative",
+    width: "60px",
+    height: "60px",
+  },
+  ".spinner-lg": {
+    position: "relative",
     width: "120px",
     height: "120px",
+  },
+  ".spinner-sm": {
+    position: "relative",
+    width: "24px",
+    height: "24px",
   },
   ".spinner-inner": {
     boxSizing: "border-box",
