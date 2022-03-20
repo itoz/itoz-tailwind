@@ -119,10 +119,10 @@ const buttons = {
     fontSize: "1.2rem",
     padding: "1rem",
   },
-  ".btn:hover": {
-    boxShadow: "0 0px 8px 0px rgba(30, 0, 60, 0.5)",
-    transition: "all 0.5s ease-in-out",
-  },
+  // ".btn:hover": {
+  //   boxShadow: "0 0px 8px 0px rgba(30, 0, 60, 0.5)",
+  //   transition: "all 0.5s ease-in-out",
+  // },
 };
 
 const lightColors = {
